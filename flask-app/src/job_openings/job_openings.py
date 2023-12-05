@@ -13,7 +13,7 @@ def get_job_openings():
     cursor = db.get_db().cursor()
 
     # use cursor to query the database for a list of products
-    cursor.execute('SELECT JobID, Name, RoleDescription,Difficulty, GradeYearRequirement FROM Job_Openings')
+    cursor.execute('SELECT JobID, CompanyPageID, Name, RoleDescription,Difficulty, GradeYearRequirement FROM Job_Openings')
 
     # grab the column headers from the returned data
     column_headers = [x[0] for x in cursor.description]
