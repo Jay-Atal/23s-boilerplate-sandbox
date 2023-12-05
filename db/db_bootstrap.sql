@@ -242,15 +242,11 @@ CREATE TABLE Company_Content
 
 CREATE TABLE Compensation_Data
 (
-     CompensationID int primary key not null ,
      PositionType varchar(150) not null ,
      AverageSalary varchar(150) not null ,
      FilterCriteria varchar(150) not null ,
-     CompanyPageID int not null,
-     CONSTRAINT fk_18 FOREIGN KEY (CompanyPageID)
-        REFERENCES Company_Page (CompanyPageID)
-        ON UPDATE CASCADE
-        ON DELETE CASCADE
+     CompanyPageID int primary key not null
+
 );
 
 insert into Moderator (ModeratorID, Email, Name, Role) values (1, 'jdunlap0@sciencedaily.com', 'Jeri Dunlap', 'Analyst');
@@ -967,53 +963,53 @@ insert into Company_Content (CompanyRepID, ContentID, ContentType, ContentData, 
 insert into Company_Content (CompanyRepID, ContentID, ContentType, ContentData, PostDate) values (45, 49, 'application/pdf', 'business', '2023-06-28 03:26:22');
 insert into Company_Content (CompanyRepID, ContentID, ContentType, ContentData, PostDate) values (12, 50, 'application/pdf', 'fashion', '2023-08-02 04:05:06');
 
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (1, 'Assistant', 60000, 'Temporary', 41);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (2, 'Specialist', 100000, 'Experienced', 17);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (3, 'Manager', 50000, 'Full-time', 9);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (4, 'Coordinator', 140000, 'Internship', 27);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (5, 'Supervisor', 120000, 'Experienced', 31);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (6, 'Coordinator', 140000, 'Part-time', 29);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (7, 'Coordinator', 50000, 'Experienced', 28);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (8, 'Coordinator', 130000, 'Temporary', 26);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (9, 'Consultant', 70000, 'Flexible schedule', 50);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (10, 'Assistant', 130000, 'Flexible schedule', 46);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (11, 'Director', 70000, 'Internship', 48);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (12, 'Administrator', 100000, 'Remote', 11);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (13, 'Associate', 50000, 'Part-time', 48);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (14, 'Director', 120000, 'Entry-level', 20);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (15, 'Director', 140000, 'Entry-level', 14);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (16, 'Specialist', 70000, 'Internship', 13);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (17, 'Manager', 50000, 'Remote', 35);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (18, 'Manager', 50000, 'Part-time', 37);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (19, 'Assistant', 120000, 'Entry-level', 21);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (20, 'Analyst', 60000, 'Entry-level', 33);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (21, 'Associate', 90000, 'Experienced', 25);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (22, 'Manager', 80000, 'Internship', 2);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (23, 'Analyst', 50000, 'Internship', 12);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (24, 'Specialist', 80000, 'Flexible schedule', 45);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (25, 'Specialist', 100000, 'Remote', 43);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (26, 'Supervisor', 140000, 'Full-time', 6);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (27, 'Associate', 120000, 'Work from home', 19);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (28, 'Manager', 140000, 'Contract', 15);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (29, 'Assistant', 50000, 'Temporary', 4);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (30, 'Specialist', 70000, 'Entry-level', 50);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (31, 'Supervisor', 130000, 'Full-time', 9);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (32, 'Analyst', 100000, 'Experienced', 1);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (33, 'Coordinator', 70000, 'Contract', 36);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (34, 'Associate', 140000, 'Contract', 4);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (35, 'Coordinator', 130000, 'Full-time', 6);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (36, 'Manager', 70000, 'Temporary', 3);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (37, 'Associate', 140000, 'Experienced', 13);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (38, 'Associate', 50000, 'Full-time', 15);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (39, 'Associate', 100000, 'Internship', 27);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (40, 'Director', 70000, 'Remote', 47);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (41, 'Coordinator', 60000, 'Work from home', 27);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (42, 'Consultant', 60000, 'Remote', 50);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (43, 'Consultant', 70000, 'Work from home', 28);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (44, 'Assistant', 130000, 'Entry-level', 37);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (45, 'Assistant', 70000, 'Experienced', 12);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (46, 'Assistant', 120000, 'Entry-level', 5);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (47, 'Director', 100000, 'Remote', 48);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (48, 'Analyst', 50000, 'Temporary', 10);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (49, 'Specialist', 130000, 'Entry-level', 3);
-insert into Compensation_Data (CompensationID, Positiontype, AverageSalary, FilterCriteria, CompanyPageID) values (50, 'Manager', 110000, 'Contract', 25);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Financial Analyst', 140000, 'Marketing', 1);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Software Engineer', 100000, 'Part-time', 2);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Customer Service Representative', 130000, 'Internship', 3);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Product Manager', 140000, 'Sales', 4);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Human Resources Coordinator', 70000, 'Finance', 5);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Sales Representative', 140000, 'Customer service', 6);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Operations Manager', 60000, 'Entry level', 7);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Software Engineer', 70000, 'Sales', 8);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Product Manager', 130000, 'Sales', 9);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Financial Analyst', 80000, 'Full-time', 10);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Software Engineer', 50000, 'Internship', 11);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Marketing Specialist', 100000, 'Sales', 12);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Software Engineer', 140000, 'Software development', 13);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Financial Analyst', 70000, 'Software development', 14);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Financial Analyst', 80000, 'Marketing', 15);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Operations Manager', 90000, 'Sales', 16);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Marketing Specialist', 80000, 'Full-time', 17);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Customer Service Representative', 90000, 'Remote', 18);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Sales Representative', 60000, 'Finance', 19);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Sales Representative', 50000, 'Full-time', 20);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Sales Representative', 140000, 'Entry level', 21);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Graphic Designer', 50000, 'Full-time', 22);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Financial Analyst', 130000, 'Finance', 23);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Sales Representative', 90000, 'Part-time', 24);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Human Resources Coordinator', 110000, 'Part-time', 25);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Marketing Specialist', 70000, 'Customer service', 26);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Human Resources Coordinator', 140000, 'Software development', 27);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Product Manager', 50000, 'Entry level', 28);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Data Analyst', 100000, 'Full-time', 29);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Graphic Designer', 60000, 'Part-time', 30);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Marketing Specialist', 50000, 'Full-time', 31);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Financial Analyst', 70000, 'Part-time', 32);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Financial Analyst', 50000, 'Marketing', 33);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Data Analyst', 70000, 'Customer service', 34);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Data Analyst', 90000, 'Customer service', 35);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Human Resources Coordinator', 70000, 'Remote', 36);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Operations Manager', 130000, 'Finance', 37);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Financial Analyst', 50000, 'Customer service', 38);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Customer Service Representative', 70000, 'Marketing', 39);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Data Analyst', 140000, 'Marketing', 40);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Sales Representative', 130000, 'Part-time', 41);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Sales Representative', 140000, 'Internship', 42);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Product Manager', 110000, 'Part-time', 43);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Marketing Specialist', 130000, 'Internship', 44);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Operations Manager', 90000, 'Marketing', 45);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Human Resources Coordinator', 130000, 'Sales', 46);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Operations Manager', 70000, 'Customer service', 47);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Marketing Specialist', 140000, 'Internship', 48);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Marketing Specialist', 90000, 'Software development', 49);
+insert into Compensation_Data (PositionType, AverageSalary, FilterCriteria, CompanypageID) values ('Human Resources Coordinator', 100000, 'Part-time', 50);
